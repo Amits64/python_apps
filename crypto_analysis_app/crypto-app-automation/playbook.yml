@@ -1,0 +1,8 @@
+---
+- name: Automation playbook for crypto-app
+  hosts: dev
+  become: yes
+  gather_facts: no
+  ignore_errors: no
+  roles:
+    - cryptocoin

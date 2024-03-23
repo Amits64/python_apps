@@ -1,0 +1,8 @@
+[dev]
+ubuntu-server
+
+[qa]
+centos7-server
+
+[prod]
+rhel7-server 

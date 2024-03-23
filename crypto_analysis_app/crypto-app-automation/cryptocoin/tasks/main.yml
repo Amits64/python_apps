@@ -1,0 +1,12 @@
+---
+# tasks file for cryptocoin
+- name: Check if nginx webserver exists
+  shell: dpkg -l | grep "{{ item }}"
+  register: checkPackage
+  ignore_errors: yes
+
+- name: Install nginx if does not exist
+  apt:
+    name: "{{ item }}"
+    state: present
+  when: checkPackage.rc != 0
